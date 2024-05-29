@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="grid grid-cols-1 gap-4 w-10/12 mx-auto">
+      <% for( let index = 0; index < messages.length; index++ ) { %>
+        <div class="border-solid border-black border-2 ">
+          <h1>User: <%= messages[index].user %> </h1>
+          <h1>Message: <%= messages[index].text %> </h1>
+          <h1>Date: <%= messages[index].added %> </h1>
+        </div>
+      <% } %>
+      <a href="/new">
+        <button>Add New Message</button>
+      </a>
+    </div>
+  </body>
+</html>
